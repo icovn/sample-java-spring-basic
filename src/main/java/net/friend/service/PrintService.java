@@ -1,4 +1,4 @@
-package net.friend.component;
+package net.friend.service;
 
 import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,18 +7,18 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope("prototype")
-public class PrintComponent {
+public class PrintService {
 
   @Autowired
-  private Animal animal;
+  private AnimalService animalService;
 
   private String name;
 
-  public PrintComponent(){
+  public PrintService(){
     this.name = UUID.randomUUID().toString();
   }
 
   public void print(){
-    System.out.println("Print name " + name + "|" + animal.hello());
+    System.out.println("Print name " + name + "|" + animalService.hello());
   }
 }

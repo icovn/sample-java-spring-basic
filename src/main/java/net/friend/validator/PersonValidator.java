@@ -3,7 +3,6 @@ package net.friend.validator;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import lombok.extern.slf4j.Slf4j;
-import net.friend.Person;
 import org.springframework.stereotype.Component;
 
 @Component

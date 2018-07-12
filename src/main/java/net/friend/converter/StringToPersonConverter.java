@@ -1,6 +1,6 @@
 package net.friend.converter;
 
-import net.friend.Person;
+import net.friend.validator.Person;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 

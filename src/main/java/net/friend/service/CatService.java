@@ -1,9 +1,9 @@
-package net.friend.component;
+package net.friend.service;
 
 import org.springframework.stereotype.Component;
 
-//@Component
-public class Cat implements Animal {
+@Component
+public class CatService implements AnimalService {
 
   private int count;
 

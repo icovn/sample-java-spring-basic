@@ -1,13 +1,40 @@
-# Add any directories, files, or patterns you don't want to be tracked by version control
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
 .idea
-setup
-source/core/src/main/java/contentws
-source/core/src/main/java/io
-source/core/src/main/java/mtws
-source/core/src/main/java/resultws
-source/core/src/main/java/smsws
-sources/lottery-api/target
-sources/lottery-crawler/target
-sources/lottery-worker/target
-sources/lottery-core/target
+*.iws
 *.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### Sub directories
+**.idea
+**.iml
+**/bootstrap.yml
+**/application-quyendt4.properties
+
+.idea/**
+*.iml/**
+**/elasticsearch/**
+**/logs/**
+**/target/**
+
+client/**.idea
+*.log

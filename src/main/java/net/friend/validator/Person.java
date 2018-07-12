@@ -1,4 +1,4 @@
-package net.friend;
+package net.friend.validator;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;

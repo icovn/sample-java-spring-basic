@@ -1,25 +1,15 @@
 package net.friend;
 
-import java.util.Set;
-import javax.validation.ConstraintViolation;
-import javax.validation.Validation;
-import javax.validation.ValidatorFactory;
 import lombok.extern.slf4j.Slf4j;
-import net.friend.component.PrintComponent;
+import net.friend.service.MyConversionService;
+import net.friend.service.PrintService;
+import net.friend.validator.Person;
 import net.friend.validator.PersonService;
-import net.friend.validator.PersonValidator;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Primary;
-import org.springframework.validation.DataBinder;
-import org.springframework.validation.Validator;
-import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
-import org.springframework.validation.DataBinder;
 
 @Slf4j
 @SpringBootApplication
@@ -36,27 +26,33 @@ public class Application implements CommandLineRunner {
   private MyConversionService myConversionService;
 
   @Autowired
-  private PrintComponent printComponent;
+  private PrintService printService;
 
   @Autowired
-  private PrintComponent printComponent2;
+  private PrintService printService2;
 
   @Autowired
-  private PrintComponent printComponent3;
+  private PrintService printService3;
 
   @Autowired
   private PersonService personService;
 
   @Override
   public void run(String... strings) {
-//    myConversionService.testBuiltIn();
-
     System.out.println(osName);
+  }
 
-//    printComponent.print();
-//    printComponent2.print();
-//    printComponent3.print();
+  private void testTypeConversion(){
+    myConversionService.testBuiltIn();
+  }
 
+  private void testSingletonVsPrototype(){
+    printService.print();
+    printService2.print();
+    printService3.print();
+  }
+
+  private void validatePersons(){
     Person person = new Person("zz",  311);
     Person person2 = new Person("icovn",  10);
 

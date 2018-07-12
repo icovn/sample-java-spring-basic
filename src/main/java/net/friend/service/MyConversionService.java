@@ -1,5 +1,6 @@
-package net.friend;
+package net.friend.service;
 
+import net.friend.validator.Person;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;

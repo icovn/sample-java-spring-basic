@@ -1,6 +1,5 @@
 package net.friend.validator;
 
-import net.friend.Person;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;

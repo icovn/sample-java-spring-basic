@@ -1,19 +1,20 @@
-package net.friend.component;
+package net.friend.service;
 
 import java.util.UUID;
-import javax.annotation.PostConstruct;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Primary
 @Scope("singleton")
-public class Dog implements Animal {
+public class DogService implements AnimalService {
 
   private int count;
 
   private String name;
 
-  public Dog(){
+  public DogService(){
     this.name = UUID.randomUUID().toString();
   }
 

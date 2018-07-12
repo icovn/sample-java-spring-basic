@@ -1,12 +1,13 @@
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-
-# Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
-!/.mvn/wrapper/maven-wrapper.jar
+# Add any directories, files, or patterns you don't want to be tracked by version control
+.idea
+setup
+source/core/src/main/java/contentws
+source/core/src/main/java/io
+source/core/src/main/java/mtws
+source/core/src/main/java/resultws
+source/core/src/main/java/smsws
+sources/lottery-api/target
+sources/lottery-crawler/target
+sources/lottery-worker/target
+sources/lottery-core/target
+*.iml
